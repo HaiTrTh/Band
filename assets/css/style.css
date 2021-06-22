@@ -1,0 +1,449 @@
+/* Reseat css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* 1. từ ngoài vào trong
+2. từ trên xuống dưới
+3. từ tổng quan đến chi tiết */
+
+/*
+1/ vị trí
+2/ kích thước
+3/ kiểu dáng
+4/ màu sắc
+*/
+
+/* common */
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+.mt-32{
+    margin-top: 32px !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third {
+    width: 33.3333%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+/* Main */
+
+#main {}
+
+.text-while {
+    color: #fff !important;
+}
+
+.clear {
+    clear: both;
+}
+
+#main {}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    /* fix cứng header trên top */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* làm cho header hiện lên trên */
+    z-index: 1;
+ 
+}
+
+
+
+#nav>li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav>li>a {
+    color: white;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+    text-transform: uppercase;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav>li:hover>a {
+    color: #000;
+    background-color: #ccc;
+    display: inline-block;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    text-decoration: none;
+    background-color: #fff;
+    /* mặc định neo trên top */
+    top: 100%;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: black;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 16px;
+    display: block;
+}
+
+#nav .subnav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .nav-arrow-down {
+    font-size: 12px;
+}
+
+#header .mobile-menu-btn{
+    display: none;
+    position: absolute;
+    top:0;
+    right: 0;
+} 
+
+#header .search-btn,#header .mobile-menu-btn {
+    float: right;
+    padding: 0 24px;
+}
+
+#headr .mobile-menu-btn:hover .menu-icon{
+    color:black;
+}
+
+#header .search-icon,
+#header .menu-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#header .search-btn:hover  {
+    background-color: #f44336;
+    cursor: pointer;
+}
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+   
+    color:black;
+}
+
+
+#slider {
+    position: relative;
+    background-color: #333;
+    margin-top: 46px;
+    /* 50% chiều ngang của chính nó */
+    padding-top: 50%;
+    background: url('/assets/img/Slider/btc.jpg') top center/cover no-repeat;
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 40px;
+    color: red;
+    font-weight: bold;
+    /* c3 */
+    text-align: center;
+    width: 100%;
+    /*  c1 left:50%;
+    transform: translateX(-50%);
+    text-align: center; */
+    /* c2 right=0 left=0 */
+    text-shadow: 0px 0px 2px black;
+}
+
+#slider .text-heading {
+    font-weight: 500px;
+    font-size: 24px;
+}
+
+#slider .text-description {
+    font-size: 15px;
+    margin-top: 24px;
+}
+
+#content {}
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 0 112px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    text-align: justify;
+    line-height: 1.4;
+    margin-top: 25px;
+}
+
+#content .member-list {
+    margin-top: 32px;
+    overflow: hidden;
+}
+
+#content .member-item {
+    text-align: center;
+}
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .member-img {
+    width: 180px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+/* tour-section */
+
+.coin-section {
+    background-color: #000;
+}
+
+.coin-list {
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.coin-list li {
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    list-style-type: none;
+}
+
+.coin-list .sold-out {
+    color: white;
+    background: red;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.coin-list .quantity {
+    float: right;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: -4px;
+}
+
+/* place */
+
+.places-list {
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-body {
+    background-color: #fff;
+    font-size: 15px;
+    padding: 16px;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-dsc {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.btn {
+    margin-top: 12px;
+    color: #fff;
+    background-color: #000;
+    padding: 11px 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 16px;
+    border: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Contact form */
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.6;
+  
+}
+
+
+.contact-info i {
+    width: 30px;
+    display: inline-block;
+}
+
+/* Contact form */
+
+
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-content a:hover{
+    opacity: 0.4;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.map-section .map-img {
+    width: 100%;
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list {
+    font-size: 24px;
+}
+
+#footer .nxs a, #footer .social-list a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#footer .social-list a:hover {
+    opacity: 0.3;
+}
+
+#footer .social-list i {
+    color: black;
+}
+
+#footer .nxs {
+    margin-top: 24px;
+}
+
+#footer .nxs a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
